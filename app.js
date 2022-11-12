@@ -7,7 +7,7 @@ const sum = (a, b) => {
 console.log(sum(7, 3))
 
 let fromDollarToYen = (dollar) => {
-    return((dollar / 1.2) * 127.9);
+    return parseFloat(((dollar / 1.2) * 127.9).toFixed(2));
 };
 
 let fromEuroToDollar = (euro) => {
@@ -16,8 +16,9 @@ let fromEuroToDollar = (euro) => {
 };
 
 let fromYenToPound = (yen) => {
-    return ((yen / 127.9) * 0.8);
+    return parseFloat(((yen / 127.9) * 0.8).toFixed(2));
 };
+
 
 
 module.exports = { sum, fromEuroToDollar, fromDollarToYen, fromYenToPound };
